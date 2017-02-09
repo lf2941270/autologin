@@ -1,6 +1,6 @@
 function autoLogin() {
     $('#login_text_username').val('admin');
-    $('#login_text_password').val('admin@161231');
+    $('#login_text_password').val('admin@170224');
     $('#login_text_verifycode').val('@fw$');
     setTimeout(function(){
         document.querySelector("#login_text_username").dispatchEvent(new Event('change'));
