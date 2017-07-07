@@ -39,7 +39,16 @@ function getStrategies() {
             return $('title').text().indexOf('shunter') >= 0
         },
         action: function () {
-            location.href = '/t'
+            $('.loginEarth').trigger('click')
+            $('[name=user]').val('admin')
+            $('[name=passwd]').val('admin@123')
+            setTimeout(function(){
+                $('[name=user]')[0].dispatchEvent(new Event('change'));
+                $('[name=passwd]')[0].dispatchEvent(new Event('change'));
+            })
+            setTimeout(function () {
+                $('.loginBtn').trigger('click')
+            }, 200);
         }
     }]
 }
